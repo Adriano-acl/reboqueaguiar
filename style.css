@@ -1,0 +1,493 @@
+@charset "UTF-8";
+
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY (Fundo e Cor da Fonte Principal) ===== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('imagens/imagem reboqueaguiar/lambo-mega1000x350.jpg'); 
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff; 
+}
+
+/* ======================================= */
+/* ===== FILTRO DE FUNDO (COBRE TUDO) ===== */
+/* ======================================= */
+#filtro-fundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.50); 
+    z-index: -1; 
+}
+/* ======================================= */
+
+
+/* ===== CABEÇALHO ===== */
+header {
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(71, 71, 71));
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative; 
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+header p {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+/* ------------------------------------------- */
+/* ESTILOS DOS ÍCONES NO CABEÇALHO */
+/* ------------------------------------------- */
+
+/* Estilo para links de telefone e endereço (p#t0 e p#t2) */
+header p a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-block; 
+}
+header p a:hover {
+    color: white; /* icones do cabeçalho*/
+}
+header p a:hover .fa-whatsapp {
+    color: #25D366; /* Verde do WhatsApp */
+}
+header p a:hover .fa-map-marker-alt {
+    color: #ea4335; /* Vermelho do Google Maps */
+}
+header p a:hover .fa-waze {
+    color: #49b3c5; /* Azul esverdeado do Waze */
+}
+/* Ícone WhatsApp (p#t0) - Alinhado à esquerda do número */
+header p#t0 a i {
+    font-size: 1.1em;
+    margin-right: 5px;
+}
+
+/* Ícone de Localização (p#t2) - Alinhado à esquerda do endereço */
+header p#t2 a i {
+    font-size: 1.1em;
+    margin-right: 5px;
+}
+
+/* Ícones de Mídias Sociais (Contêiner) */
+.social-icons-header {
+    text-align: center;
+    padding: 10px 0 5px;
+}
+
+/* Links dos Ícones Sociais */
+.social-icons-header a {
+    color: white;
+    font-size: 1.5em;
+    margin: 0 8px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.social-icons-header a:hover {
+    transform: scale(1.1);
+}
+
+/* Cores de Hover Específicas */
+.social-icons-header .fa-instagram:hover {
+    color: #E1306C;
+}
+.social-icons-header .fa-facebook-f:hover {
+    color: #4267B2;
+}
+.social-icons-header .fa-youtube:hover {
+    color: #FF0000;
+}
+/* ------------------------------------------- */
+
+
+/* ======================================= */
+/* ===== MENU SANDUÍCHE ===== */
+/* ======================================= */
+.navbar {
+    background-color: rgba(14, 14, 14, 0.85);
+    padding: 10px;
+    position: relative;
+    text-align: left;
+    min-height: 48px; 
+}
+.menu-toggle {
+    display: block; 
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 11; 
+}
+.menu-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none; 
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: rgba(14, 14, 14, 0.98); 
+    z-index: 10;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.menu-links.ativo {
+    display: flex; 
+}
+.menu-links li {
+    width: 100%; 
+}
+.menu-links a {
+    display: block;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    background-image: linear-gradient(to left, rgba(255, 30, 0, 0.408), transparent); /* Usando a cor de destaque */
+}
+.menu-links a:hover {
+    background-color: #ff4000fc; /* Cor de destaque no hover */
+    color: #1a1a1a;
+}
+/* ======================================= */
+
+/* ===== CONTEÚDO E SLIDESHOW ===== */
+main {
+    padding: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.slideshow-container {
+    max-width: 1000px; 
+    margin: 20px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+#imagem-principal {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* ===== QUADROS DE SEÇÕES ===== */
+.quadros-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 60px auto;
+}
+
+.quadro {
+    position: relative;
+    width: 320px;
+    height: 220px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 10px rgb(255, 254, 254);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.quadro:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* ====== IMAGENS DOS QUADROS ====== */
+#q1 {
+    background-image: url('imagens/imagem reboqueaguiar/lambo-mega1000x350.jpg');
+}
+
+#q2 {
+    background-image: url('imagens/imagem reboqueaguiar/traseira.jpg');
+}
+
+#q3 {
+    background-image: url('imagens/imagem reboqueaguiar/lambo-mega2.jpg');
+}
+
+/* ====== DESCRIÇÃO SOBREPOSTA ====== */
+.descricao {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.descricao h3 {
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.descricao p {
+    font-size: 0.9rem;
+    margin-top: 5px;
+    line-height: 1.2;
+}
+
+
+/* ======================================= */
+/* ====== NOVO RODAPÉ (FOOTER) - ESTILOS PROFISSIONAIS ====== */
+/* ======================================= */
+.footer {
+    background-color: #1a1a1a; /* Fundo escuro */
+    color: #fff; /* Texto claro */
+    padding: 40px 20px 20px;
+    font-size: 0.9em;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.footer-col {
+    width: 22%; /* Define a largura para 4 colunas */
+    min-width: 250px; /* Garante que não fique muito estreito em telas pequenas */
+    margin-bottom: 30px;
+}
+
+.footer-col h4 {
+    color: #ff9900; /* Cor de destaque (laranja) */
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-bottom: 2px solid #ff9900;
+    padding-bottom: 5px;
+}
+
+/* Estilo dos Links */
+.footer-col a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: inline-block;
+}
+
+.footer-col a:hover {
+    color: #ff9900;
+}
+
+.footer-col i {
+    margin-right: 8px;
+}
+
+.footer-col p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+/* --- ESTILO DO FORMULÁRIO --- */
+.contact-form-container {
+    /* Sem regras específicas aqui */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #444;
+    background-color: #2b2b2b;
+    color: #fff;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #aaa;
+}
+
+.contact-form button {
+    background-color: #ff9900;
+    color: #1a1a1a;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background-color: #e68a00;
+}
+
+/* --- Ícones Sociais do Rodapé --- */
+.footer-social-icons {
+    margin-top: 15px;
+}
+
+.footer-social-icons a {
+    font-size: 1.5em;
+    margin-right: 15px;
+    color: #ccc;
+}
+
+/* --- Rodapé Inferior (Copyright) --- */
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 0.8em;
+    color: #aaa;
+}
+
+/* ====== RODAPÉ PARALLAX ANTIGO (Pode ser mantido ou removido se quiser) ===== */
+.rodape-parallax {
+    position: relative;
+    overflow: hidden;
+    height: 250px; 
+    background-color: black;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax-img {
+    width: auto; 
+    height: 100%; 
+    max-width: none; 
+    display: block;
+    object-position: center;
+    transition: transform 0.3s ease-out;
+}
+/* ======================================= */
+
+
+/* ===== MEDIA QUERIES (Responsividade) ===== */
+
+/* Ajuste para Tablet/Desktop no Cabeçalho */
+@media (min-width: 769px) {
+    
+    header p#t0,
+    header p#t2 {
+        display: inline-block;
+        width: 48%;
+        font-size: 1em;
+        margin: 0; 
+        padding: 5px 0; 
+        white-space: nowrap;
+    }
+
+    header p#t0 {
+        text-align: left;
+    }
+
+    header p#t2 {
+        text-align: right;
+    }
+    
+    .social-icons-header {
+        text-align: center;
+        padding: 5px 0 0; 
+        margin-top: 10px;
+    }
+
+    /* Responsividade do Rodapé - 2 colunas em telas médias */
+    .footer-col {
+        width: 45%; 
+    }
+}
+
+/* Responsividade do Rodapé - 1 coluna em celulares */
+@media (max-width: 580px) {
+    .footer-col {
+        width: 100%; 
+    }
+}
+
+/* Estilos de Galeria (para foto_bhracing.html) */
+.galeria-fotos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.galeria-fotos img {
+    width: 225px; 
+    height: 225px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.galeria-fotos img:hover {
+    transform: scale(1.05);
+}
+
+/* Ajuste para telas menores (responsividade) */
+@media (max-width: 500px) {
+    .galeria-fotos img {
+        width: 100%; 
+        height: auto;
+        max-width: 300px;
+    }
+}
