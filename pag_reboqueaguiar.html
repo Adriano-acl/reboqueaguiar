@@ -48,41 +48,29 @@
         <ul class="menu-links" id="menu-links">
             <li><a href="index.html">HOME</a></li>
             <li><a href="pag_reboqueaguiar.html">REBOQUE AGUIAR</a></li>
-            <li><a href="foto_reboqueaguiar.html">CARROS</a></li>
+            <li><a href="foto_bhracing.html">CARROS</a></li>
             <li><a href="#">VÍDEOS</a></li>
         </ul>
     </nav>
-
-    <main> 
-        <div class="slideshow-container">
-            <img id="imagem-principal" src="imagens/imagem reboqueaguiar/carro-verde-chatgbt1000x350.png" alt="Imagem Principal BH Racing">
-        </div>
-
-        <section class="quadros-container">
-            <a href="pag_reboqueaguiar.html" class="quadro" id="q1">
-                <div class="descricao">
-                    <h3>História Reboque Aguiar</h3>
-                    <p>A trajetória que começou nos anos 2000 e transformou-se em referência em transporte.</p>
-                </div>
-            </a>
-
-            <a href="foto_reboqueaguiar.html" class="quadro" id="q2">
-                <div class="descricao">
-                    <h3>Galeria de Fotos</h3>
-                    <p>Fotos exclusivas de carros transportado pela Reboque Aguiar.</p>
-                </div>
-            </a>
-
-            <a href="#" class="quadro" id="q3">
-                <div class="descricao">
-                    <h3>Novidades e Eventos</h3>
-                    <p>Acompanhe as novidades e tudo o que acontece no mundo da Reboque Aguiar.</p>
-                </div>
-            </a>
-        </section>
+    
+    <main>
+        <h1>Historia Reboque Aguiar</h1>
+        <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia vitae cumque veniam, illo ab natus ducimus quod consequatur doloremque corporis ea accusamus odit cupiditate facilis, assumenda harum aperiam voluptatum fuga. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus modi atque earum est accusamus nostrum, quam officiis fugit natus necessitatibus. Officia impedit mollitia accusamus consectetur minus fugit unde modi eos.</P>
+        <picture>
+            <img src="imagens/imagem reboqueaguiar/traseira225x225.jpg" alt="imagem lambo">
+        </picture>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta sit necessitatibus illum eaque, aut cum? Itaque hic, eligendi error optio ducimus necessitatibus? Consequatur iusto iste ab? Nobis, unde. Soluta, odio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aperiam architecto similique. Veritatis, ratione illum perferendis voluptates voluptatem voluptatum, adipisci aut nam quidem ipsum dolores repellat placeat sequi accusantium. Fugit.</p>
+        <picture>
+            <img src="imagens/imagem reboqueaguiar/carro-verde-chatgbt225x225.png" alt="img carro">
+            <img src="imagens/imagem reboqueaguiar/lambo-mega225x225.jpg" alt="montana fogo">
+        </picture>
+        <picture>
+            <img src="imagens/imagem reboqueaguiar/carro-verde-chatgbt225x225.png" alt="">
+        </picture>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores incidunt maiores fugiat distinctio perferendis, est facere illum a at ab reiciendis debitis impedit. Quas recusandae quia non veniam voluptatibus atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius doloribus vero tenetur placeat enim vitae iusto nostrum beatae consequatur! Accusantium quos ipsum, incidunt unde nisi nam facere cumque ab eius.</p>
     </main>
-
-    <section class="rodape-parallax">
+    
+   <section class="rodape-parallax">
         <img src="imagens/imagem reboqueaguiar/logo-chatgbt.png" alt="Imagem Rodapé" class="parallax-img">
     </section>
 
@@ -135,36 +123,22 @@
         <div class="footer-bottom">
             <p>© 2025 Reboque Aguiar. Todos os direitos reservados. Site criado por ACLtecnol</p>
         </div>
-    </footer>
+
     <script>
-        // SLIDESHOW (MANTIDO)
-        const imagens = [
-            'imagens/imagem reboqueaguiar/carro-verde-chatgbt1000x350.png',
-            'imagens/imagem reboqueaguiar/caminha710-1000x350.jpg',
-            'imagens/imagem reboqueaguiar/ferrari-ver-caminhao1000x350.jpg',
-            'imagens/imagem reboqueaguiar/lambo-mega1000x350.jpg',
-            'imagens/imagem reboqueaguiar/lambo-mega2-1000x350.jpg',
-        ];
-        let indexAtual = 0;
-        const imgPrincipal = document.getElementById('imagem-principal');
-
-        setInterval(() => {
-            indexAtual = (indexAtual + 1) % imagens.length;
-            imgPrincipal.src = imagens[indexAtual];
-        }, 3000);
-
-        // PARALLAX ZOOM RODAPÉ (MANTIDO)
+        // PARALLAX ZOOM RODAPÉ
         window.addEventListener('scroll', function () {
             const imgParallax = document.querySelector('.parallax-img');
             const scrollY = window.scrollY;
-            const scale = 1 + Math.min(scrollY / 1000, 0.5); 
-            imgParallax.style.transform = `scale(${scale})`;
+            const scale = 1 + Math.min(scrollY / 1000, 0.5);
+            if (imgParallax) {
+                imgParallax.style.transform = `scale(${scale})`;
+            }
         });
-
-        // MENU SANDUÍCHE (MANTIDO)
+        
+        // MENU SANDUÍCHE
         const toggleBtn = document.getElementById('menu-toggle');
         const menuLinks = document.getElementById('menu-links');
-
+        
         if (toggleBtn && menuLinks) {
             toggleBtn.addEventListener('click', () => {
                 menuLinks.classList.toggle('ativo');

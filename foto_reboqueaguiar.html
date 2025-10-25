@@ -52,37 +52,29 @@
             <li><a href="#">VÍDEOS</a></li>
         </ul>
     </nav>
+    <main>
+        <h1>FOTOS DOS CARROS E MOMENTOS</h1>
 
-    <main> 
-        <div class="slideshow-container">
-            <img id="imagem-principal" src="imagens/imagem reboqueaguiar/carro-verde-chatgbt1000x350.png" alt="Imagem Principal BH Racing">
+        <div class="galeria-fotos">
+            <img src="imagens/imagem reboqueaguiar/caminha710.jpg" alt="Maverick Motor">
+            <img src="imagens/imagem reboqueaguiar/caminhao.jpg" alt="Maverick na Pista">
+            <img src="imagens/imagem reboqueaguiar/carro-verde-chatgbt.png" alt="Chevette">
+            <img src="imagens/imagem reboqueaguiar/ferrari-ver-caminhao.jpg" alt="Montana Alinhando">
+            <img src="imagens/imagem reboqueaguiar/IMG-20251023-WA0011.jpg" alt="Carro Milico">
+            <img src="imagens/imagem reboqueaguiar/traseira.jpg" alt="Carro Beringela">
+            <img src="imagens/imagem reboqueaguiar/IMG-20251023-WA0015.jpg" alt="Audi de Corrida">
+            <img src="imagens/imagem reboqueaguiar/IMG-20251023-WA0016.jpg" alt="Chevette 2">
+            <img src="imagens/imagem reboqueaguiar/IMG-20251023-WA0019.jpg" alt="Visita Thiago">
+            <img src="imagens/imagem reboqueaguiar/IMG-20251023-WA0020.jpg" alt="Honda Civic">
+            <img src="imagens/imagem reboqueaguiar/IMG-20251023-WA0021.jpg" alt="Montana Frente">
+            <img src="imagens/imagem reboqueaguiar/IMG-20251023-WA0022.jpg" alt="Milico e Sergio">
+            <img src="imagens/imagem reboqueaguiar/IMG-20251023-WA0023.jpg" alt="Montana B">
+            <img src="imagens/imagem reboqueaguiar/IMG-20251023-WA0025.jpg" alt="Cristian">
+            <img src="imagens/imagem reboqueaguiar/IMG-20251023-WA0029.jpg" alt="Milico Grade">
         </div>
-
-        <section class="quadros-container">
-            <a href="pag_reboqueaguiar.html" class="quadro" id="q1">
-                <div class="descricao">
-                    <h3>História Reboque Aguiar</h3>
-                    <p>A trajetória que começou nos anos 2000 e transformou-se em referência em transporte.</p>
-                </div>
-            </a>
-
-            <a href="foto_reboqueaguiar.html" class="quadro" id="q2">
-                <div class="descricao">
-                    <h3>Galeria de Fotos</h3>
-                    <p>Fotos exclusivas de carros transportado pela Reboque Aguiar.</p>
-                </div>
-            </a>
-
-            <a href="#" class="quadro" id="q3">
-                <div class="descricao">
-                    <h3>Novidades e Eventos</h3>
-                    <p>Acompanhe as novidades e tudo o que acontece no mundo da Reboque Aguiar.</p>
-                </div>
-            </a>
-        </section>
     </main>
 
-    <section class="rodape-parallax">
+<section class="rodape-parallax">
         <img src="imagens/imagem reboqueaguiar/logo-chatgbt.png" alt="Imagem Rodapé" class="parallax-img">
     </section>
 
@@ -135,36 +127,22 @@
         <div class="footer-bottom">
             <p>© 2025 Reboque Aguiar. Todos os direitos reservados. Site criado por ACLtecnol</p>
         </div>
-    </footer>
+
     <script>
-        // SLIDESHOW (MANTIDO)
-        const imagens = [
-            'imagens/imagem reboqueaguiar/carro-verde-chatgbt1000x350.png',
-            'imagens/imagem reboqueaguiar/caminha710-1000x350.jpg',
-            'imagens/imagem reboqueaguiar/ferrari-ver-caminhao1000x350.jpg',
-            'imagens/imagem reboqueaguiar/lambo-mega1000x350.jpg',
-            'imagens/imagem reboqueaguiar/lambo-mega2-1000x350.jpg',
-        ];
-        let indexAtual = 0;
-        const imgPrincipal = document.getElementById('imagem-principal');
-
-        setInterval(() => {
-            indexAtual = (indexAtual + 1) % imagens.length;
-            imgPrincipal.src = imagens[indexAtual];
-        }, 3000);
-
-        // PARALLAX ZOOM RODAPÉ (MANTIDO)
+        // PARALLAX ZOOM RODAPÉ
         window.addEventListener('scroll', function () {
             const imgParallax = document.querySelector('.parallax-img');
             const scrollY = window.scrollY;
-            const scale = 1 + Math.min(scrollY / 1000, 0.5); 
-            imgParallax.style.transform = `scale(${scale})`;
+            const scale = 1 + Math.min(scrollY / 1000, 0.5);
+            if (imgParallax) {
+                imgParallax.style.transform = `scale(${scale})`;
+            }
         });
-
-        // MENU SANDUÍCHE (MANTIDO)
+        
+        // MENU SANDUÍCHE
         const toggleBtn = document.getElementById('menu-toggle');
         const menuLinks = document.getElementById('menu-links');
-
+        
         if (toggleBtn && menuLinks) {
             toggleBtn.addEventListener('click', () => {
                 menuLinks.classList.toggle('ativo');
