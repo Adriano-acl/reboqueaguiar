@@ -530,25 +530,26 @@ main {
     padding-right: 5px;
 }
 
-/* Ajuste para Mobile - Ocultar o texto do balão em telas muito pequenas */
+/* Ajuste para Mobile - Corrigido para MANTER o texto visível */
 @media (max-width: 500px) {
     #whatsapp-float {
         left: 10px;
         bottom: 10px;
-        padding: 10px; /* Reduz o padding */
-        border-radius: 50%; /* Transforma em um círculo puro */
-        width: 50px; /* Define largura e altura para o círculo */
-        height: 50px;
-        justify-content: center;
-        align-items: center;
+        padding: 8px 12px; /* Ajusta o padding */
+        border-radius: 20px; /* Mantém o formato arredondado */
+        width: auto; /* Permite que a largura se ajuste ao conteúdo */
+        height: auto;
+        justify-content: flex-start; /* Alinha o conteúdo à esquerda */
     }
     
     #whatsapp-float span {
-        display: none; /* Oculta o texto em telas pequenas */
+        display: inline; /* Garante que o texto está visível */
+        font-size: 0.8em; /* Reduz um pouco o tamanho do texto */
+        padding-right: 0;
     }
 
     #whatsapp-float i {
-        margin: 0; /* Remove a margem do ícone */
-        font-size: 1.8em;
+        margin-right: 5px; /* Ajusta a margem do ícone */
+        font-size: 1.6em;
     }
 }
